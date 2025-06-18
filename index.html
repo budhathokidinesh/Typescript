@@ -4,8 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TYPESCRIPT</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    Welcome to typescript demo week 2
+    <div class="directory-container">
+      <div class="directory-header">
+        <h1><img src="/assets/images/books.png" /> Pone Directory</h1>
+        <h2>Contact Counter: <span id="counter">0</span></h2>
+      </div>
+      <div class="directory-form">
+        <div class="directory-input">
+          <input type="hidden" id="id-input" />
+          <input type="text" id="name-input" placeholder="name" />
+          <input type="number" id="phone-input" placeholder="Phone-Number" />
+        </div>
+        <div class="directory-submit">
+          <button class="add" id="add-button" onclick="add">Add</button>
+          <button
+            class="update hidden"
+            id="update-button"
+            onclick="updateContactData()"
+          >
+            Update
+          </button>
+          <button
+            class="reset hidden"
+            id="reset-button"
+            onclick="resetInputForm()"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+      <div class="directory-list">
+        <ul id="contact-list"></ul>
+      </div>
+    </div>
   </body>
+  <script src="/build/main.js"></script>
 </html>
